@@ -4,8 +4,18 @@
 	&:before, &:after { box-sizing: border-box; }
 }
 
-nav { background: #000; color: #fff; padding: 10px 15px;
-	a { color: #fff; text-decoration: none; margin-right: 10px; font-size: 18px;
+body.dark {
+	background: #000; color: #fff;
+	nav { background: #222; }
+	a { color: #fff; }
+}
+
+body.light {
+	background: #fff; color: #000;
+	nav a { color: #000; }
+}
+nav { padding: 10px 15px; border-bottom: 1px solid #ccc;
+	a { text-decoration: none; margin-right: 10px; font-size: 18px;
 		&:hover { text-decoration: underline; }	
 	}
 }

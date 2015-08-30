@@ -8,9 +8,9 @@ app.config(function($routeProvider){
 		templateUrl: 'partials/about.html',
 		controller: 'aboutController'
 	})
-	.when('/contact', {
-		templateUrl: 'partials/contact.html',
-		controller: 'contactController'
+	.when('/settings', {
+		templateUrl: 'partials/settings.html',
+		controller: 'settingsController'
 	})
 	.when('/page-not-found', {
 		templateUrl: '/partials/404.html',

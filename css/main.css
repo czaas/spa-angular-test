@@ -357,12 +357,24 @@ th {
   *:before, *:after {
     box-sizing: border-box; }
 
-nav {
+body.dark {
   background: #000;
-  color: #fff;
-  padding: 10px 15px; }
+  color: #fff; }
+  body.dark nav {
+    background: #222; }
+  body.dark a {
+    color: #fff; }
+
+body.light {
+  background: #fff;
+  color: #000; }
+  body.light nav a {
+    color: #000; }
+
+nav {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ccc; }
   nav a {
-    color: #fff;
     text-decoration: none;
     margin-right: 10px;
     font-size: 18px; }

@@ -1,0 +1,13 @@
+<h1>Settings</h1>
+
+<p><strong>Current Theme:</strong> {{ theme.current }}</p>
+
+<form>
+	Dark Mode
+	<input type="radio" name="themeMode" value="dark" ng-model="theme.mode">
+	<br />
+	Light Mode
+	<input type="radio" name="themeMode" value="light" ng-model="theme.mode">
+	<br />
+	<button ng-click="saveSettings()">Save</button>
+</form>
