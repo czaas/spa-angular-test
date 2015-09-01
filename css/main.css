@@ -402,3 +402,9 @@ h3:hover .fa-pencil {
 
 h3:hover {
   cursor: pointer; }
+
+ul.list li {
+  list-style: none; }
+
+ul.list input[type="checkbox"] {
+  margin-right: 5px; }

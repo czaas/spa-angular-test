@@ -37,26 +37,28 @@ app.controller('themeController', [ '$scope', '$cookies', function($scope, $cook
 }]);
 
 app.controller('notepadController', function($scope){
-	$scope.allLists = [
-		{
-			listName: 'Second List',
-			listItems: ['One', 'two']
-		},{
-			listName: 'First List',
-			listItems: ['Check one!', 'chek two!']
-		},{
-			listName: 'Third List',
-			listItems: ['Ch one!', 'chek!']
-		}
+	$scope.list = [
+		{ todo: 'This List', done: false },
+		{ todo: 'Two!!', done: false },
+		{ todo: 'Three', done: false }
 	];
 	
-	$scope.editCurrentList = function(){
-		var i = this.$index;
-		var arr = $scope.allLists[i].listItems;
-		// goal:
-		// on edit set all listItems to input fields and be able to save them when finished. 
-		
+	$scope.addItem = function(){
+		var obj = { todo: $scope.newItem, done: false };
+		$scope.list.push(obj);
+		$scope.newItem = '';
 	}
+	
+	$scope.removeItems = function(){
+		var oldTodos = $scope.list;
+		$scope.list = [];
+		
+		angular.forEach(oldTodos, function(item){
+			if(!item.done){ $scope.list.push(item); }
+		});
+	}
+	
+	
 	
 	
 });
