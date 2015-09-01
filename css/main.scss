@@ -14,10 +14,18 @@ body.light {
 	background: #fff; color: #000;
 	nav a { color: #000; }
 }
-nav { padding: 10px 15px; border-bottom: 1px solid #ccc;
+
+header { width: 100%; border-bottom: 1px solid #ccc; }
+nav { padding: 10px 15px; width: 100%; max-width: 1024px; margin: 0 auto;
 	a { text-decoration: none; margin-right: 10px; font-size: 18px;
 		&:hover { text-decoration: underline; }	
 	}
 }
 
-.view-wrapper { padding: 15px; }
+.view-wrapper { padding: 15px; width: 100%; max-width: 1024px; margin: 0 auto; }
+
+h3 {
+	.fa-pencil { color: transparent; transition: all .2s ease; }
+	&:hover .fa-pencil { color: inherit; }
+	&:hover { cursor: pointer; }
+} 

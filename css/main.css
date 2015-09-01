@@ -371,9 +371,15 @@ body.light {
   body.light nav a {
     color: #000; }
 
+header {
+  width: 100%;
+  border-bottom: 1px solid #ccc; }
+
 nav {
   padding: 10px 15px;
-  border-bottom: 1px solid #ccc; }
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto; }
   nav a {
     text-decoration: none;
     margin-right: 10px;
@@ -382,4 +388,17 @@ nav {
       text-decoration: underline; }
 
 .view-wrapper {
-  padding: 15px; }
+  padding: 15px;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto; }
+
+h3 .fa-pencil {
+  color: transparent;
+  transition: all 0.2s ease; }
+
+h3:hover .fa-pencil {
+  color: inherit; }
+
+h3:hover {
+  cursor: pointer; }

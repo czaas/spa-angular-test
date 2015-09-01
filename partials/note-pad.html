@@ -1,0 +1,36 @@
+<h1>My Note Pad</h1>
+
+<h2>Features</h2>
+<ul>
+	<li>Saves Lists of lists</li>
+	<li>Have different types of lists</li>
+	<li>make a link from a list item</li>
+</ul>
+
+<p><strong>Lists of Lists</strong>:<br />
+I'm going to organize the code as an object, with objects.</p>
+
+<pre><code class="javascript">
+var myLists = {
+	'listName': {
+		type: 'bullet list',
+		list: ['item', 'item2', 'item3']
+	}
+}
+</code></pre>
+
+<p>I need to be able to:</p>
+<ul>
+	<li>Create new list - form > input that takes list name >^ radio inputs that takes determine which type of list it's going to be.</li>
+</ul> 
+
+
+
+<div>
+	<div ng-repeat="list in allLists | filter: listName">
+		<h3 ng-click="editCurrentList()">{{ list.listName }} <span><i class="fa fa-pencil" ng-model="editThisList"></i></span></h3>
+		<ul>
+			<li ng-repeat="item in list.listItems"><input type="text" value="{{ item }}" ng-readonly="!editThisList"></li>
+		</ul>
+	</div>
+</div>

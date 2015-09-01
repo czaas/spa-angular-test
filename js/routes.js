@@ -16,6 +16,10 @@ app.config(function($routeProvider){
 		templateUrl: '/partials/404.html',
 		controller: 'errorController'
 	})
+	.when('/note-pad', {
+		templateUrl: '/partials/note-pad.html',
+		controller: 'notepadController'
+	})
 	.otherwise({
 		redirectTo: '/page-not-found'
 	});
